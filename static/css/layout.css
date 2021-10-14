@@ -1,0 +1,32 @@
+/* SHOWCASE*/
+.showcase{
+    margin: 20px;
+    text-align: justify;
+    width: 100%;
+    height:550px;
+    background: url(https://res.cloudinary.com/twenty20/private_images/t_standard-fit/v1521838972/photosp/f00cec10-1f17-4e47-8aad-e76191d25a73/f00cec10-1f17-4e47-8aad-e76191d25a73.jpg)no-repeat center center/cover;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: white;
+    font-size: 15px;
+    border: 1px solid white;
+    margin: 10px 0;
+}
+a.enlace {
+    background-color: #990000;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none
+    
+  }

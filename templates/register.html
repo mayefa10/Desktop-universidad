@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="{{ url_for('static', filename='js/validacion.js') }}"></script>
+  <title>Formulario de registro</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/miEstilo.css') }}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link
+</head>
+
+<body>
+  <section class="content">
+    {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+  </section>
+
+  <h1>Registro Estudiantil</h1>
+
+  <form action="{{ url_for('register')}}" method="post" name="formRegistro" onSubmit="validar_formulario();">
+    <div> Primer nombre: <input type="text" id="nombre" name="nombre" /></div>
+
+    <div>
+      Seguendo nombre:
+      <input type="text" id="segname" name="segname" />
+    </div>
+
+    <div>
+      Apellidos:
+      <input type="text" id="apellname" name="apellname" />
+    </div>
+
+
+    <div>
+      Genero: <input type="radio" id="sexo" name="sexo" value="h" /> F
+      <input type="radio" name="sexo" id="sexo" value="m" /> M
+      <input type="radio" name="sexo" id="sexo" value="m" />Otro
+    </div>
+
+    <div>
+      Correo: <input type="text" id="correo" name="correo" maxlength="100" />
+    </div>
+    
+    <div class="col-8">
+      <div class="col-md-'8'">
+        <label for="inputState" class="form-label">Fecha de nacimiento:</label>
+        <input type="date" id="start" name="trip-start" value="2018-07-22" min="1950-01-01" max="2021-12-31">
+        </label>
+      </div>
+      
+      <div class="col-md-8">
+        <label for="inputState" class="form-label">Estudios previos</label>
+        <select id="inputState" class="form-select">
+          <option selected>Bachillerato</option>
+          <option selected>Tecnico</option>
+          <option selected>Pregrado</option>
+          <option selected>Posgrado</option>
+          <option selected>Maestria</option>
+          <option selected>Doctorado</option>
+          <option selected>Otro</option>
+        </select>
+      </div>
+      <br>
+      <div class="col-md-8">
+        <label for="inputState" class="form-label">Nombre programa académico: </label>
+        <input type="text" class="form-control" id="programa">
+      </div>
+      <br>
+        <div class="col-md-8">
+        <label for="inputEstudio" class="form-label">Carrera a la que desea
+          ingresar:</label>
+        <select id="inputState" class="form-select">
+          <option selected>Administración de Empresas</option>
+          <option selected>Antropología</option>
+          <option selected>Arquitectura</option>
+          <option selected>Artes Escénicas</option>
+          <option selected>Artes Visuales</option>
+          <option selected>Bacteriología</option>
+          <option selected>Bioingeniería</option>
+          <option selected>Biología</option>
+        </select>
+      </div>
+      <br>
+      <div class="col-md-8">
+        <label for="inputState" class="form-label">Estado civil</label>
+        <select id="inputState" class="form-select">
+          <option selected>Soltero/a</option>
+          <option selected>Casado/a</option>
+          <option selected>Madre Soltera</option>
+          <option selected>Padre Soltero</option>
+        </select>
+        <br>
+      </div>
+      <div class="col-md-12">
+        <label for="inputState" class="form-label">Tipo de documento:</label>
+        <select id="inputState" class="form-select">
+          <option selected>Tarjeta de identidad</option>
+          <option selected>Cédula de ciudadanía</option>
+          <option selected>Tarjeta de extranjería</option>
+          <option selected>Cédula de extranjería</option>
+        </select>
+      </div>
+      <br>
+      <div class="col-md-8">
+        <label for="inputState" class="form-label">Número del documento:</label>
+        <input type="text" class="form-control" id="inputNdoc">
+      </div>
+      <br>
+      <h5>Información de contacto</h5>
+      <div class="col-md-8">
+        Dirección: <input type="text" class="form-control" placeholder="" aria-label="First name">
+        <br>
+      </div>
+      <div class="col-md-8">
+        Numero telefonico: <input type="text" class="form-control" placeholder="" aria-label="Second name">
+      </div>
+      <br>
+      <div class="col-md-8">
+        Celular: <input type="text" class="form-control" placeholder="" aria-label="Second name">
+      </div>
+      <br>
+      <h5>Contacto de emergencia</h5>
+      <div class="col-md-8">
+        Nombre: <input type="text" class="form-control" placeholder="" aria-label="Second name">
+      </div>
+      <br>
+      <div class="col-md-8">
+        Parentesco: <input type="text" class="form-control" placeholder="" aria-label="Second name">
+      </div>
+      <br>
+      <div class="col-md-8">
+        Documento: <input type="text" class="form-control" placeholder="" aria-label="Second name">
+      </div>
+      <br>
+      <div class="col-md-8">
+        Telefono/celular: <input type="text" class="form-control" placeholder="" aria-label="Second name">
+      </div>
+      <br>
+      <p>
+        <input type="checkbox" name="condiciones" /> Declaro haber leido y
+        acepto las condiciones generales del programa y la normativa sobre
+        protección de datos
+      </p>
+
+      <a href="{{ url_for('login')}}" class="button">Registrarse</a>
+    
+    </script>
+  </form>
+</body>
+
+</html>

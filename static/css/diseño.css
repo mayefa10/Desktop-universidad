@@ -1,0 +1,66 @@
+body{
+    background-color:rgb(150,205,205);
+}
+
+#overview{
+    height: 790px;
+    width: 1250px;
+    background-color: rgb(255, 255, 255);
+}
+
+#cabeza{
+    height: 125px;
+    width:1000px;
+    background-color: #b1b1b1;
+    position: relative;
+    align-items: center;
+    top: 100px;
+}
+
+#Datoscabeza{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+#iconouser{
+    height: 125px;
+    width: 125px;
+}
+
+#Datos{
+    width: 500px;
+    height: 235px;
+    position: absolute;
+    top: 250px; left: 125px;
+}
+
+#Culumnadatos{
+    border: 1px solid #b1b1b1;
+    padding-top: 60px;
+
+}
+
+#Contacto{
+    width: 500px;
+    height: 235px;
+    position: absolute;
+    top: 500px; left: 125px;
+}
+
+#Culumnacontactos{
+    border: 1px solid #b1b1b1;
+    padding-top: 60px
+}
+
+#Configuraciones{
+    width: 500px;
+    height: 185px;
+    position: absolute;
+    top: 250px; left: 730px;
+}
+
+#Culumnaconfiguraciones{
+    border: 1px solid #b1b1b1;
+    padding-top: 60px
+}

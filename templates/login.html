@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Login | Unicolombia</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/master.css') }}">
+</head>
+<body>
+  {% for message in get_flashed_messages() %}
+      <div> {{ message }} </div>
+  {%endfor%}
+    <div class="login-box">
+        <img src="" alt="Logo Unicolombia">
+        <h1>Login here</h1>
+        <form name="loginForm"  method="post" action="{{url_for('login')}}">
+            <!-- username -->
+            <label for="username">Username</label>
+            <input name="username" id="username">
+
+            <!--Password-->
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <a href="{{ url_for('layout')}}" class="button">Iniciar secion</a>
+            
+        </form>
+    </div>
+</body>
+</html>

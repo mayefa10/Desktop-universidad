@@ -1,0 +1,38 @@
+.tituloR {
+    text-align: center;
+    font-style: italic;
+    margin: 50px;
+}
+.tituloc{
+    font-style: italic;
+}
+.form-label{
+    font-style: bold;
+}
+
+.lista{
+    width: 200px;
+
+}
+.imagencc{
+    width: 200px;
+}
+
+.form-label {
+    font-style: bold;
+}
+.contenedor{
+    margin: 50px;
+    padding: 100px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    line-height: 25px;
+}
+.botoneraR{
+    text-align: center;
+    position: center; top: 80 px;
+}
+tg {
+    
+}
